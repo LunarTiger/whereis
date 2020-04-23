@@ -11,7 +11,7 @@ try{
 	firebase.initializeApp(config);
 	var database = firebase.database();
 	//Extra info
-	var message = database.ref('dog/stat');
+	var message = database.ref('lunar/location');
 	message.on('value', (function(snapshot) {
 		var messageVal = snapshot.val();
 		if(messageVal){
