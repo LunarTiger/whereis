@@ -5,7 +5,7 @@ var place = [
 	"I'm out with my dad, Lanny. He can be contacted at <a href='tel:+15403279023'>1-540-327-9023</a>.",
 	"I'm out with my mom, Shelva. She can be contacted at <a href='tel:+13048204338'>1-304-820-4338</a>."
 ];
-try{
+//try{
 	var config = {
 		databaseURL: "https://lunar-home.firebaseio.com/",
 	};
@@ -36,7 +36,7 @@ try{
 			document.getElementById('more-info').innerHTML = "No clue. "+place[0];
 		}
 	}));
-}
-catch{
-	document.getElementById('more-info').innerHTML = "The script crashed. "+place[0];
-}
+//}
+//catch{
+//	document.getElementById('more-info').innerHTML = "The script crashed. "+place[0];
+//}
