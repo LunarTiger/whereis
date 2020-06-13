@@ -3,7 +3,8 @@ var place = [
 	"I'm home at <a href='https://www.google.com/maps/place/293+Babbs+Mountain+Rd,+Winchester,+VA+22603/@39.2744651,-78.1799907,17z/data=!3m1!4b1!4m5!3m4!1s0x89b5f115682b0d49:0xa79fd3617adf6fc!8m2!3d39.274461!4d-78.177802' id='address' target='_blank'>293 Babbs Mountain Rd. Winchester, VA 22603</a>.",
 	"I'm not home.",
 	"I'm out with my dad, Lanny. He can be contacted at <a href='tel:+15403279023'>1-540-327-9023</a>.",
-	"I'm out with my mom, Shelva. She can be contacted at <a href='tel:+13048204338'>1-304-820-4338</a>."
+	"I'm out with my mom, Shelva. She can be contacted at <a href='tel:+13048204338'>1-304-820-4338</a>.",
+	"I'm out with my sister, Kelly. She can be contacted at <a href='tel:+15403980502'>1-540-398-0502</a>."
 ];
 //try{
 	var config = {
@@ -16,10 +17,10 @@ var place = [
 	message.on('value', (function(snapshot) {
 		var messageVal = snapshot.val();
 		if(messageVal){
-			if(messageVal=="home"){
+			if(messageVal=="in"){
 				document.getElementById('more-info').innerHTML = place[1]+" "+place[0];
 			}
-			else if(messageVal=="away"){
+			else if(messageVal=="out"){
 				document.getElementById('more-info').innerHTML = place[2]+" "+place[0];
 			}
 			else if(messageVal=="dad"){
@@ -27,6 +28,9 @@ var place = [
 			}
 			else if(messageVal=="mom"){
 				document.getElementById('more-info').innerHTML = place[4]+" "+place[0];
+			}
+			else if(messageVal=="sis"){
+				document.getElementById('more-info').innerHTML = place[5]+" "+place[0];
 			}
 			else{
 				document.getElementById('more-info').innerHTML = messageVal+" "+place[0];
